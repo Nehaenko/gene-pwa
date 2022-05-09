@@ -1,0 +1,14 @@
+.filterButton {
+    composes: filterButton from '@magento/venia-ui/lib/components/FilterModalOpenButton/filterModalOpenButton.module.css';
+    min-width: 6.25rem;
+}
+
+.filterButton:focus {
+    box-shadow: none;
+}
+
+@media (min-width: 1024px) {
+    .filterButton {
+        display: none;
+    }
+}

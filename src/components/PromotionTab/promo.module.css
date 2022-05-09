@@ -1,0 +1,36 @@
+header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border: 0;
+}
+
+.promoMessage {
+    text-align: center;
+    height: 40px;
+    background: #f5f5f5;
+    text-transform: uppercase;
+}
+
+.promoMessageText,
+.promoMobileMessageText {
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.promoMessageText {
+    display: block;
+}
+
+.promoMobileMessageText {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .promoMessageText {
+        display: none;
+    }
+
+    .promoMobileMessageText {
+        display: block;
+    }
+}

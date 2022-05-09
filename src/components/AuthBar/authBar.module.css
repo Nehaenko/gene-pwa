@@ -1,0 +1,30 @@
+.root {
+    align-items: stretch;
+    background-color: rgba(109, 114, 120, 0.06);
+    display: grid;
+    gap: 0.75rem;
+    grid-auto-flow: column;
+    min-height: 116px;
+}
+
+.contents {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: start;
+    padding: 0 2rem;
+}
+
+.contactLink img,
+.signIn img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.contactLink,
+.signIn {
+    display: flex;
+    text-decoration: underline;
+    margin: 15px 0 0;
+}

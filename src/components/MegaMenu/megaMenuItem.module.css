@@ -1,0 +1,36 @@
+.megaMenuItem {
+    padding: 0;
+}
+
+.megaMenuLink {
+    align-items: center;
+    display: inline-flex;
+    min-height: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 30px;
+}
+
+.megaMenuLink svg {
+    display: none;
+}
+
+.megaMenuLinkActive {
+    composes: megaMenuLink;
+    text-decoration: underline;
+}
+
+.megaMenuItem_active {
+    composes: megaMenuItem;
+    display: flex;
+}
+
+.arrowDown {
+    padding-left: 0.5rem;
+    line-height: 0;
+}
+
+.megaMenuItem:hover .megaMenuLink,
+.megaMenuItem:focus .megaMenuLink {
+    background: #f2f1f2;
+}
