@@ -1,7 +1,7 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
 import { useFooter } from '../../talons/Footer/useFooter';
-import {useStyle } from '@magento/venia-ui/lib/classify';
+import { useStyle } from '@magento/venia-ui/lib/classify';
 import defaultClasses from './footer.module.css';
 import { DEFAULT_LINKS } from '@magento/venia-ui/lib/components/Footer/sampleData';
 import Newsletter from '../Newsletter';
