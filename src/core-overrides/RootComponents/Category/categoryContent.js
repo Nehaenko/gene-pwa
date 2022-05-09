@@ -25,7 +25,7 @@ import SortedByContainer, {
     SortedByContainerShimmer
 } from '@magento/venia-ui/lib/components/SortedByContainer';
 import defaultClasses from './category.module.css';
-import NoProductsFound from './NoProductsFound';
+import NoProductsFound from '@magento/venia-ui/lib/RootComponents/Category/NoProductsFound';
 
 const FilterModal = React.lazy(() =>
     import('@magento/venia-ui/lib/components/FilterModal')
@@ -58,7 +58,8 @@ const CategoryContent = props => {
         filters,
         items,
         totalCount,
-        totalPagesFromData
+        totalPagesFromData,
+        categoryDisplayMode
     } = talonProps;
 
     const sidebarRef = useRef(null);
@@ -179,23 +180,25 @@ const CategoryContent = props => {
                             {shouldRenderSidebarContent ? sidebar : null}
                         </Suspense>
                     </div>
-                    <div className={classes.categoryContent}>
+                    {categoryDisplayMode !== 'PAGE' ? (
+                        <div className={classes.categoryContent}>
                         <div className={classes.heading}>
-                            <div
-                                data-cy="CategoryContent-categoryInfo"
-                                className={classes.categoryInfo}
-                            >
-                                {categoryResultsHeading}
-                            </div>
-                            <div className={classes.headerButtons}>
-                                {maybeFilterButtons}
-                                {maybeSortButton}
-                            </div>
-                            {maybeSortContainer}
+                        <div
+                        data-cy="CategoryContent-categoryInfo"
+                        className={classes.categoryInfo}
+                        >
+                    {categoryResultsHeading}
                         </div>
-                        {content}
+                        <div className={classes.headerButtons}>
+                    {maybeFilterButtons}
+                    {maybeSortButton}
+                        </div>
+                    {maybeSortContainer}
+                        </div>
+                    {content}
                         <Suspense fallback={null}>{filtersModal}</Suspense>
-                    </div>
+                        </div>
+                        ) : null}
                 </div>
             </article>
         </Fragment>
