@@ -5,6 +5,9 @@ function talonsIntercept(targets) {
 
     const useCategoryContent = require('./RootComponents/Category/useCategoryContent.targetables');
     useCategoryContent(targets);
+
+    const useProduct = require('./RootComponents/Product/useProduct.targetables');
+    useProduct(targets);
 }
 
 module.exports = talonsIntercept;

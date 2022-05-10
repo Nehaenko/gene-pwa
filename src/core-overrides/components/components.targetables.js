@@ -22,6 +22,9 @@ function componentsIntercept(targets) {
 
     const App = require('./App/app.targetables');
     App(targets);
+
+    const ProductImageCarousel = require('./ProductImageCarousel/productImageCarousel.targetables.js');
+    ProductImageCarousel(targets);
 }
 
 module.exports = componentsIntercept;
